@@ -74,7 +74,7 @@ span.number {
   color: #7db8ffcc;
 }
 
-.map {
+.map > div {
   display: flex;
   align-content: flex-start;
   flex-flow: row wrap;
@@ -115,7 +115,7 @@ span.number {
   width: 1em;
   text-align: right;
   font-size: inherit;
-  color: white;
+  color: inherit;
   border: 0;
   padding: 0;
 }

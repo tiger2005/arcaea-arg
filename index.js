@@ -92,10 +92,11 @@ const changeValue = (ch, val) => {
 }
 
 const initMap = () => {
-  let rev = '';
+  let rev = '<div>';
   for (let x in decMap)
     if (decMap.hasOwnProperty(x))
-      rev += `<div class='item key-${x.charCodeAt()} ${decMap[x].length === 0 ? `blank` : ''}'>${x}<input maxlength='1' oninput="value=value.replace(/[^0-9A-Za-z_]/g,''); changeValue(\'${x}\', value)" value="${decMap[x]}"></div>`;
+      rev += `<div class='item key-${x.charCodeAt()} ${decMap[x].length === 0 ? `blank` : ''}'>${x} &gt;&gt;<input maxlength='1' oninput="value=value.replace(/[^0-9A-Za-z_]/g,''); changeValue(\'${x}\', value)" value="${decMap[x]}"></div> ${x === 'Z' || x === 'z' ? "</div><div style='width: 100%; height: 15px'></div><div>" : ""}`;
+  rev += '</div>';
   document.querySelector('.map').innerHTML = rev;
 };
 
@@ -162,7 +163,7 @@ textarea.addEventListener('input', (e) => {
 
 const adjustWidth = () => {
   const num = document.body.clientWidth;
-  const displays = Math.max(Math.floor(num / 200), 1);
+  const displays = Math.max(Math.floor(num / 150), 1);
   console.log(displays);
   document.body.style.setProperty('--item-percent', 'calc(' + (100 / displays) + '% - 10px)');
 };
