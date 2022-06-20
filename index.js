@@ -117,7 +117,7 @@ const reveal = () => {
     let secondLine = false;
     for (let i = 0; i < line.length; i ++) {
       let ch = line[i];
-      if (ch === '3' && ch === '4' && ch === '7') {
+      if (ch === '3' || ch === '4' || ch === '7') {
         html += space;
         html2 += `<span class='number'>${ch}</span>`;
         secondLine = true;
