@@ -4,7 +4,7 @@ var result = document.querySelector('.result');
 var decMap = {
   "a": "L",
   "b": "I",
-  "c": "",
+  "c": "D",
   "d": "S",
   "e": "r",
   "f": "w",
@@ -12,7 +12,7 @@ var decMap = {
   "h": "l",
   "i": "i",
   "j": "d",
-  "k": "",
+  "k": "P",
   "l": "x",
   "m": "",
   "n": "m",
@@ -33,11 +33,11 @@ var decMap = {
   "C": "",
   "D": "e",
   "E": "a",
-  "F": "",
+  "F": "O",
   "G": "b",
   "H": "",
   "I": "Y",
-  "J": "",
+  "J": "F",
   "K": "s",
   "L": "",
   "M": "",
@@ -53,7 +53,7 @@ var decMap = {
   "W": "u",
   "X": "v",
   "Y": "",
-  "Z": "",
+  "Z": "R",
   "_": "c"
 };
 
@@ -117,7 +117,7 @@ const reveal = () => {
     let secondLine = false;
     for (let i = 0; i < line.length; i ++) {
       let ch = line[i];
-      if (ch.charCodeAt() >= 48 && ch.charCodeAt() <= 57) {
+      if (ch === '3' && ch === '4' && ch === '7') {
         html += space;
         html2 += `<span class='number'>${ch}</span>`;
         secondLine = true;
