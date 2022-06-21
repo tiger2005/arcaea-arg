@@ -164,7 +164,6 @@ textarea.addEventListener('input', (e) => {
 const adjust = () => {
   const num = document.body.clientWidth;
   const displays = Math.max(Math.floor(num / 150), 1);
-  console.log(displays);
   document.body.style.setProperty('--item-percent', 'calc(' + (100 / displays) + '% - 10px)');
 };
 
