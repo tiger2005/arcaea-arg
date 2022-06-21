@@ -1,0 +1,146 @@
+* {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+body {
+  background: #1f1e33;
+  color: white;
+}
+
+.mono, .mono * {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.quote {
+  box-sizing: border-box;
+  border-left: 5px solid #555;
+  padding-left: 10px;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  min-height: 1em;
+  max-height: 300px;
+  background: inherit;
+  border: 1px solid #777;
+  color: inherit;
+  padding: 10px;
+  resize: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.box {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.result {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.result > div {
+  white-space: nowrap;
+}
+
+.result span {
+  display: inline-block;
+  font-size: 1.1em;
+  height: 1em;
+  width: 0.5em;
+}
+
+span.match {
+  color: #aca;
+}
+
+span.wrong {
+  color: #c99;
+}
+
+span.unknown {
+  color: #999;
+}
+
+span.number {
+  color: #7db8ffcc;
+}
+
+.map > div {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.map .item {
+  height: 36px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  margin: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  flex: 0 0 var(--item-percent);
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.item.blank {
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.item.warn {
+  background: rgb(255 203 102 / 50%);
+}
+
+.item.changed {
+  background: rgb(96 255 54 / 40%);
+}
+
+.item input {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  background: transparent;
+  width: 1em;
+  text-align: right;
+  font-size: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+}
+
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 4px;
+}
+::-webkit-scrollbar-corner{
+  display: none;
+}
+::-webkit-scrollbar{
+  transition: 0.3s;
+}
+
+*::-webkit-scrollbar:hover{
+  background-color: #333;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #555;
+}
+* {
+  scrollbar-color: #555 #333;
+  scrollbar-width: thin;
+}
